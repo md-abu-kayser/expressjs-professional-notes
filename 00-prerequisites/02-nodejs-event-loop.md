@@ -1,26 +1,26 @@
-# 02 Nodejs Event Loop
+# Node.js Event Loop
 
-## Overview
-Short explanation of what this topic covers.
+Understanding the event loop is crucial for building efficient Express apps.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## The Event Loop in Brief
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+- Node.js runs on a single thread.
+- The event loop handles I/O operations asynchronously.
+- Phases: timers → pending callbacks → idle/prepare → poll → check → close callbacks.
 
-## Example
-```js
-// Add a working example here
-```
+## Blocking vs Non-Blocking
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+- Blocking code stops the entire process.
+- Express must never block the event loop (e.g., heavy CPU in route handlers).
 
-## Summary
-Write a short recap here.
+## Microtasks
+
+`process.nextTick()` and Promises execute before next phase.
+
+## Implications for Express
+
+- Use async route handlers.
+- Offload CPU-intensive tasks to worker threads or external services.
+- Use proper error handling with async/await.
+
+> 📘 Next: [Async Patterns](03-async-patterns.md)

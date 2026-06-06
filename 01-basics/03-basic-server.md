@@ -1,26 +1,33 @@
-# 03 Basic Server
+# Basic Express Server
 
-## Overview
-Short explanation of what this topic covers.
+```javascript
+const express = require("express");
+const app = express();
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+// Middleware for parsing JSON
+app.use(express.json());
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+// Route
+app.get("/", (req, res) => {
+  res.json({ message: "Hello World" });
+});
 
-## Example
-```js
-// Add a working example here
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Key Objects
 
-## Summary
-Write a short recap here.
+- `app` – the Express application.
+- `req` – enhanced Node.js request object.
+- `res` – enhanced response object.
+
+## Response Methods
+
+- `res.send()` – send text/HTML/Buffer
+- `res.json()` – send JSON
+- `res.sendFile()` – send a file
+- `res.status()` – set status code chainable
+
+> 📘 Next: [Routing Basics](04-routing-basics.md)

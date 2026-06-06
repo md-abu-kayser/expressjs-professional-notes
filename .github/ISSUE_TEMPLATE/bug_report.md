@@ -1,20 +1,34 @@
 ---
 name: Bug report
-about: Report a problem in the notes or code examples
-title: "[Bug]"
+about: Create a report to help us improve
+title: "[BUG] "
 labels: bug
+assignees: ""
 ---
 
-## What happened?
-Describe the issue here.
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-## Expected behavior
-Describe what should have happened.
+**To Reproduce**
+Steps to reproduce the behavior:
 
-## Steps to reproduce
-1. 
-2. 
-3. 
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## Additional context
-Add screenshots or notes here.
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Environment (please complete):**
+
+- OS: [e.g., macOS]
+- Node.js version: [e.g., 18.17]
+- Express version: [e.g., 4.18]
+- Other relevant packages:
+
+**Additional context**
+Add any other context about the problem here.

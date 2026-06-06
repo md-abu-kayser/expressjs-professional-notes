@@ -1,26 +1,20 @@
-# 04 Module System
+# Node.js Module System
 
-## Overview
-Short explanation of what this topic covers.
+## CommonJS (default)
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- `require('./module')`
+- `module.exports` / `exports`
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+## ES Modules
 
-## Example
-```js
-// Add a working example here
-```
+- `import ... from '...'`
+- `export default` / `export`
+- Use `.mjs` or `"type": "module"` in package.json.
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## In Express
 
-## Summary
-Write a short recap here.
+- Most examples use CommonJS.
+- You can use ES modules; ensure Node.js version is recent.
+- TypeScript is a popular alternative with ES module syntax.
+
+> 📘 Next: **01-basics** – [Introduction](../01-basics/01-introduction.md)

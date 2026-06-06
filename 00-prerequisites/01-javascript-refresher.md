@@ -1,26 +1,37 @@
-# 01 Javascript Refresher
+# JavaScript Refresher for Express
 
-## Overview
-Short explanation of what this topic covers.
+Before diving into Express, ensure you're comfortable with modern JavaScript.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## ES6+ Essentials
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+- `let`, `const` vs `var`
+- Arrow functions `() => {}`
+- Template literals: `` `Hello ${name}` ``
+- Destructuring: `const { port } = config;`
+- Spread/rest: `...args`
+- Default parameters
+- Promises & async/await
 
-## Example
-```js
-// Add a working example here
-```
+## Objects and Functions
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+- First-class functions
+- Closures
+- `this` binding
+- `call`, `apply`, `bind`
 
-## Summary
-Write a short recap here.
+## Arrays
+
+- `map`, `filter`, `reduce`, `forEach`
+- `find`, `some`, `every`
+
+## Modules
+
+- CommonJS: `require` / `module.exports`
+- ES modules: `import` / `export`
+
+## Classes and Prototypes
+
+- `class` syntax, constructor, inheritance
+- Prototype chain basics
+
+> 📘 Next: [Node.js Event Loop](02-nodejs-event-loop.md)

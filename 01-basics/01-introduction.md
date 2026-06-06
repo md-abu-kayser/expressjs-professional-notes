@@ -1,26 +1,26 @@
-# 01 Introduction
+# Introduction to Express.js
 
-## Overview
-Short explanation of what this topic covers.
+Express is a fast, unopinionated, minimalist web framework for Node.js.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## What It Is
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+- Built on top of Node.js's `http` module.
+- Provides a robust set of features for web and mobile applications.
+- Thin layer of fundamental web application features without obscuring Node.js.
 
-## Example
-```js
-// Add a working example here
-```
+## Why Express?
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+- Huge ecosystem of middleware.
+- Simple routing.
+- Easy integration with template engines, databases, etc.
+- The foundation of many other frameworks (like NestJS, Sails).
 
-## Summary
-Write a short recap here.
+## Core Features
+
+- Routing
+- Middleware
+- Request/response helpers (`res.json()`, `res.sendFile()`)
+- View rendering
+- Error handling
+
+> 📘 Next: [Installation & Project Setup](02-installation-project-setup.md)

@@ -1,26 +1,29 @@
-# 03 Async Patterns
+# Async Patterns in Node.js
 
-## Overview
-Short explanation of what this topic covers.
+## Callbacks
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- Error-first callbacks (`(err, result) => {}`).
+- Callback hell → avoid.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+## Promises
 
-## Example
-```js
-// Add a working example here
+- `.then()`, `.catch()`, `.finally()`.
+- `Promise.all`, `Promise.allSettled`, `Promise.race`, `Promise.any`.
+
+## Async/Await
+
+- Cleaner syntax.
+- Wrap in try-catch for error handling.
+- Use `await` with promises, not callbacks.
+
+## Express and Async
+
+Express 4 does not handle rejected promises automatically; you must catch them.
+Use a wrapper:
+
+```javascript
+const asyncHandler = (fn) => (req, res, next) =>
+  Promise.resolve(fn(req, res, next)).catch(next);
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Module System](04-module-system.md)

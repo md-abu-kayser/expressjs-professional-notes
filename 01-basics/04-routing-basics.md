@@ -1,26 +1,32 @@
-# 04 Routing Basics
+# Routing Basics
 
-## Overview
-Short explanation of what this topic covers.
+Routes define how an app responds to client requests.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## Basic Route
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.get('/users', (req, res) => { ... });
+app.post('/users', (req, res) => { ... });
+app.put('/users/:id', (req, res) => { ... });
+app.delete('/users/:id', (req, res) => { ... });
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## `app.route()`
 
-## Summary
-Write a short recap here.
+Chainable route handlers for a single path:
+
+```javascript
+app.route('/items')
+  .get((req, res) => { ... })
+  .post((req, res) => { ... });
+```
+
+## Router Object
+
+See [Router Object](../05-advanced-express/01-router-object-modular-routing.md).
+
+## Route Order
+
+Routes are matched in the order they are defined; first match wins.
+
+> 📘 Next: [Route Parameters & Query Strings](05-route-parameters-query-strings.md)

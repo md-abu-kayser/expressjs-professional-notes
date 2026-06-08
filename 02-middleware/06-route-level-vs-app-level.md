@@ -1,26 +1,28 @@
-# 06 Route Level Vs App Level
+# Route-Level vs App-Level Middleware
 
-## Overview
-Short explanation of what this topic covers.
+## App-Level
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+`app.use(...)` applies to every request.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.use(logger);
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Route-Level
 
-## Summary
-Write a short recap here.
+Apply to specific paths or routers:
+
+```javascript
+app.use("/api", apiRouter);
+apiRouter.use(authMiddleware);
+```
+
+## Single Route
+
+```javascript
+app.get('/profile', authMiddleware, (req, res) => { ... });
+```
+
+Use route-level for more granular control.
+
+> 📘 Next: **03-databases** – [MongoDB Setup](../03-databases/mongodb/01-mongoose-setup.md)

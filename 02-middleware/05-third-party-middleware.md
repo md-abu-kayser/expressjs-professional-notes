@@ -1,26 +1,25 @@
-# 05 Third Party Middleware
+# Popular Third-Party Middleware
 
-## Overview
-Short explanation of what this topic covers.
+- `morgan` – HTTP request logger
+- `cors` – Cross-Origin Resource Sharing
+- `helmet` – Security headers
+- `compression` – Gzip compression
+- `cookie-parser` – Parse cookies
+- `express-rate-limit` – Rate limiting
+- `express-session` – Session management
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Install: `npm install morgan cors helmet compression cookie-parser`
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+```javascript
+const morgan = require("morgan");
+const cors = require("cors");
+const helmet = require("helmet");
+const compression = require("compression");
 
-## Example
-```js
-// Add a working example here
+app.use(helmet());
+app.use(cors());
+app.use(compression());
+app.use(morgan("combined"));
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Route-level vs App-level](06-route-level-vs-app-level.md)

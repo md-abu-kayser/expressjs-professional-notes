@@ -1,26 +1,23 @@
-# 06 Transactions
+# Transactions with Mongoose
 
-## Overview
-Short explanation of what this topic covers.
+Since MongoDB 4.0+ with replica sets.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const session = await mongoose.startSession();
+session.startTransaction();
+try {
+  await Order.create([{ product: "Book", quantity: 1 }], { session });
+  await Inventory.updateOne(
+    { product: "Book" },
+    { $inc: { stock: -1 } },
+    { session },
+  );
+  await session.commitTransaction();
+} catch (error) {
+  await session.abortTransaction();
+} finally {
+  session.endSession();
+}
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **SQL** – [PostgreSQL Setup](../sql/01-postgresql-setup.md)

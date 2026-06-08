@@ -1,26 +1,26 @@
-# 01 What Is Middleware
+# What Is Middleware?
 
-## Overview
-Short explanation of what this topic covers.
+Middleware functions are functions that have access to the request object (`req`), the response object (`res`), and the next middleware function in the application’s request-response cycle.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## Signature
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+(req, res, next) => { ... }
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## They Can:
 
-## Summary
-Write a short recap here.
+- Execute any code.
+- Make changes to req/res.
+- End the request-response cycle.
+- Call the next middleware.
+
+## Types
+
+- Application-level
+- Router-level
+- Error-handling
+- Built-in
+- Third-party
+
+> 📘 Next: [Built-in Middleware](02-built-in-middleware.md)

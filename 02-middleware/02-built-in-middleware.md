@@ -1,26 +1,25 @@
-# 02 Built In Middleware
+# Built-in Middleware
 
-## Overview
-Short explanation of what this topic covers.
+## `express.json()`
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Parses JSON payloads (replaces body-parser).
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.use(express.json());
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## `express.urlencoded({ extended: true })`
 
-## Summary
-Write a short recap here.
+Parses URL-encoded payloads.
+
+## `express.static()`
+
+Serves static assets.
+
+## `express.Router()`
+
+Modular route handlers (see later).
+
+Express no longer bundles `cookie-parser`; use the separate package.
+
+> 📘 Next: [Writing Custom Middleware](03-writing-custom-middleware.md)

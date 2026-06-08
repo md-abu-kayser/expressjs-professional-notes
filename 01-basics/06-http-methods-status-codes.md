@@ -1,26 +1,30 @@
-# 06 HTTP Methods Status Codes
+# HTTP Methods & Status Codes
 
-## Overview
-Short explanation of what this topic covers.
+## Common Methods
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- `GET` – retrieve
+- `POST` – create
+- `PUT` – full update
+- `PATCH` – partial update
+- `DELETE` – delete
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+## Status Codes
 
-## Example
-```js
-// Add a working example here
+- `200` OK
+- `201` Created
+- `204` No Content
+- `400` Bad Request
+- `401` Unauthorized
+- `403` Forbidden
+- `404` Not Found
+- `500` Internal Server Error
+
+## Express Usage
+
+```javascript
+res.status(201).json({ id: newUser._id });
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Always set proper status codes for API endpoints.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Static Files Serving](07-static-files-serving.md)

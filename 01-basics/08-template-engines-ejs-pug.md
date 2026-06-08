@@ -1,26 +1,32 @@
-# 08 Template Engines EJS Pug
+# Template Engines (EJS & Pug)
 
-## Overview
-Short explanation of what this topic covers.
+Express supports multiple template engines.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## EJS
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+- Embedded JavaScript
+- Similar to HTML with `<%= %>` tags.
+- Setup: `npm install ejs`
 
-## Example
-```js
-// Add a working example here
+```javascript
+app.set("view engine", "ejs");
+app.set("views", "./views");
+app.get("/", (req, res) => res.render("index", { title: "Home" }));
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Pug (formerly Jade)
 
-## Summary
-Write a short recap here.
+- White-space sensitive syntax.
+- Setup: `npm install pug`
+
+```javascript
+app.set("view engine", "pug");
+```
+
+## Common Usage
+
+- Server-side rendering (SSR)
+- Email templates
+- Not as common for REST APIs (prefer JSON responses).
+
+> 📘 Next: [Error Handling Basics](09-error-handling-basics.md)

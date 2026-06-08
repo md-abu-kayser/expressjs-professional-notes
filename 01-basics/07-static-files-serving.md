@@ -1,26 +1,31 @@
-# 07 Static Files Serving
+# Serving Static Files
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.use(express.static("public"));
+// Now all files in public/ are served
+// Example: public/style.css → http://localhost:3000/style.css
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Multiple Directories
 
-## Summary
-Write a short recap here.
+```javascript
+app.use(express.static("public"));
+app.use(express.static("assets"));
+```
+
+## Virtual Path Prefix
+
+```javascript
+app.use("/static", express.static("public"));
+// Accessible via /static/style.css
+```
+
+## Cache Control
+
+Static files are cached by default; you can set `maxAge`:
+
+```javascript
+app.use(express.static("public", { maxAge: "1d" }));
+```
+
+> 📘 Next: [Template Engines](08-template-engines-ejs-pug.md)

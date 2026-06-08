@@ -1,26 +1,37 @@
-# 09 Error Handling Basics
+# Error Handling Basics
 
-## Overview
-Short explanation of what this topic covers.
+Express catches synchronous errors automatically. For async, use a wrapper.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## Synchronous
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.get("/error", (req, res) => {
+  throw new Error("Broken");
+});
+// Express will catch and call the error handler.
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Asynchronous
 
-## Summary
-Write a short recap here.
+```javascript
+app.get("/async-error", async (req, res, next) => {
+  try {
+    await someAsyncOp();
+  } catch (err) {
+    next(err);
+  }
+});
+```
+
+## Global Error Handler
+
+Four arguments signature:
+
+```javascript
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).json({ error: err.message });
+});
+```
+
+> 📘 Next: [Environment Variables](10-environment-variables.md)

@@ -1,26 +1,28 @@
-# 01 Mongoose Setup
+# Mongoose Setup with Express
 
-## Overview
-Short explanation of what this topic covers.
+Mongoose is an ODM for MongoDB.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## Installation
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install mongoose
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Connection
 
-## Summary
-Write a short recap here.
+```javascript
+const mongoose = require("mongoose");
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => console.log("Connected to MongoDB"));
+```
+
+## Environment Variable
+
+MONGODB_URI=mongodb://localhost:27017/mydb
+
+> 📘 Next: [Schema Design](02-schema-design.md)

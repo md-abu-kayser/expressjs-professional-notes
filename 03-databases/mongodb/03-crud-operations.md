@@ -1,26 +1,33 @@
-# 03 Crud Operations
+# CRUD Operations with Mongoose
 
-## Overview
-Short explanation of what this topic covers.
+## Create
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const user = await User.create({ name: "John", email: "john@example.com" });
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Read
 
-## Summary
-Write a short recap here.
+```javascript
+const users = await User.find({ age: { $gte: 18 } });
+const user = await User.findById(id);
+```
+
+## Update
+
+```javascript
+await User.updateOne({ _id: id }, { $set: { name: "Jane" } });
+// or findOneAndUpdate
+```
+
+## Delete
+
+```javascript
+await User.deleteOne({ _id: id });
+```
+
+## Query Helpers
+
+Chain `.sort()`, `.select()`, `.limit()`, `.skip()`.
+
+> 📘 Next: [Indexing](04-indexing.md)

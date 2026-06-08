@@ -1,26 +1,28 @@
-# 04 Error Handling Middleware
+# Error Handling Middleware
 
-## Overview
-Short explanation of what this topic covers.
+Defined with four arguments.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).json({ error: err.message });
+});
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+- Must be placed last in the middleware chain.
+- Call `next(err)` in regular middleware to skip to error handler.
 
-## Summary
-Write a short recap here.
+## Custom Error Classes
+
+```javascript
+class AppError extends Error {
+  constructor(message, status) {
+    super(message);
+    this.status = status;
+  }
+}
+```
+
+Then in routes: `throw new AppError('Not found', 404);`
+
+> 📘 Next: [Third-party Middleware](05-third-party-middleware.md)

@@ -1,26 +1,33 @@
-# 03 Writing Custom Middleware
+# Writing Custom Middleware
 
-## Overview
-Short explanation of what this topic covers.
+## Example: Request Logger
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+function requestLogger(req, res, next) {
+  console.log(`${req.method} ${req.url}`);
+  next();
+}
+app.use(requestLogger);
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Example: Authentication Middleware
 
-## Summary
-Write a short recap here.
+```javascript
+function requireAuth(req, res, next) {
+  if (!req.headers.authorization) return res.status(401).send("Unauthorized");
+  // verify token...
+  next();
+}
+app.use("/admin", requireAuth);
+```
+
+## Modifying `req` or `res`
+
+```javascript
+function addRequestTime(req, res, next) {
+  req.requestTime = Date.now();
+  next();
+}
+```
+
+> 📘 Next: [Error Handling Middleware](04-error-handling-middleware.md)

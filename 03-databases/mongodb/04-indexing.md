@@ -1,26 +1,27 @@
-# 04 Indexing
+# Indexing in MongoDB
 
-## Overview
-Short explanation of what this topic covers.
+Create indexes to speed up queries.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## Defining in Schema
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const userSchema = new mongoose.Schema({
+  email: { type: String, index: true, unique: true },
+});
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Compound Index
 
-## Summary
-Write a short recap here.
+```javascript
+userSchema.index({ email: 1, createdAt: -1 });
+```
+
+## Creating Index Programmatically
+
+`User.createIndexes()`
+
+## Tip
+
+Use `explain()` to see if an index is used. Avoid over-indexing (impacts write performance).
+
+> 📘 Next: [Aggregation Pipeline](05-aggregation-pipeline.md)

@@ -1,26 +1,23 @@
-# 10 Environment Variables
+# Environment Variables
 
-## Overview
-Short explanation of what this topic covers.
+Use environment variables to manage configuration without hardcoding.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## Using `.env` file (with `dotenv`)
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+require("dotenv").config();
+const port = process.env.PORT || 3000;
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Best Practices
 
-## Summary
-Write a short recap here.
+- Never commit `.env` to version control.
+- Provide a `.env.example` template.
+- Validate required variables at startup.
+- Use different files for different environments (dev, staging, prod).
+
+## Custom Environment
+
+`NODE_ENV=production node app.js`
+
+> 📘 Next: **02-middleware** – [What is Middleware?](../02-middleware/01-what-is-middleware.md)

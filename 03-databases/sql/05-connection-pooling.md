@@ -1,26 +1,23 @@
-# 05 Connection Pooling
+# Connection Pooling
 
-## Overview
-Short explanation of what this topic covers.
+Database connections are expensive. Use pooling to reuse connections.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+## With `pg`
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const pool = new Pool({ max: 20, idleTimeoutMillis: 30000 });
+const client = await pool.connect();
+try {
+  const res = await client.query("...");
+} finally {
+  client.release();
+}
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Sequelize/Knex
 
-## Summary
-Write a short recap here.
+Pool configuration inside options.
+
+Always release connections to avoid leaks.
+
+> 📘 Next: **Cache** – [Redis Setup](../cache/01-redis-setup.md)

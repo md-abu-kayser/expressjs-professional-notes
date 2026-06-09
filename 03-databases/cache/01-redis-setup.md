@@ -1,26 +1,16 @@
-# 01 Redis Setup
+# Redis Setup with Express
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install ioredis
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const Redis = require("ioredis");
+const redis = new Redis();
+redis.set("key", "value");
+const val = await redis.get("key");
+```
 
-## Summary
-Write a short recap here.
+Redis is used for caching, sessions, rate limiting, and pub/sub.
+
+> 📘 Next: [Caching Strategies](02-caching-strategies.md)

@@ -1,17 +1,12 @@
-# Migrations and Seeds
+# Raw Queries vs ORM
 
-## Knex
+| Raw SQL               | ORM                   |
+| --------------------- | --------------------- |
+| Full control          | Convenience           |
+| Performance optimised | Abstraction layer     |
+| More boilerplate      | Less code             |
+| Manual migrations     | Automatic schema sync |
 
-- `knex migrate:make migration_name`
-- `knex migrate:latest`
-- `knex seed:run`
+Use raw queries for complex reporting; ORM for typical CRUD.
 
-## Sequelize
-
-- `sequelize migration:create`
-- `sequelize db:migrate`
-- `sequelize db:seed:all`
-
-Keep database schema versioned.
-
-> 📘 Next: [Raw Queries vs ORM](04-raw-queries-vs-orm.md)
+> 📘 Next: [Connection Pooling](05-connection-pooling.md)

@@ -1,26 +1,20 @@
-# 01 Password Hashing Bcrypt
+# Password Hashing with bcrypt
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install bcrypt
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const bcrypt = require("bcrypt");
+const saltRounds = 12;
 
-## Summary
-Write a short recap here.
+// Hash password
+const hash = await bcrypt.hash(password, saltRounds);
+
+// Compare
+const match = await bcrypt.compare(inputPassword, storedHash);
+```
+
+Never store plain-text passwords. Use bcrypt with sufficient salt rounds.
+
+> 📘 Next: [Session vs JWT](02-session-vs-jwt.md)

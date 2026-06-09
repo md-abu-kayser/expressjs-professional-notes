@@ -1,26 +1,17 @@
-# 04 Raw Queries Vs Orm
+# Migrations and Seeds
 
-## Overview
-Short explanation of what this topic covers.
+## Knex
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- `knex migrate:make migration_name`
+- `knex migrate:latest`
+- `knex seed:run`
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+## Sequelize
 
-## Example
-```js
-// Add a working example here
-```
+- `sequelize migration:create`
+- `sequelize db:migrate`
+- `sequelize db:seed:all`
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Keep database schema versioned.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Raw Queries vs ORM](04-raw-queries-vs-orm.md)

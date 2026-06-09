@@ -1,26 +1,24 @@
-# 02 Caching Strategies
+# Caching Strategies
 
-## Overview
-Short explanation of what this topic covers.
+- **Cache-aside**: app checks cache before DB; write to cache after DB.
+- **Write-through**: write to cache then DB (consistent but slow).
+- **Write-behind**: write to cache, async write to DB.
+- **TTL (time-to-live)**: set expiration.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Example middleware for cache-aside:
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+async function cacheMiddleware(req, res, next) {
+  const key = req.originalUrl;
+  const cached = await redis.get(key);
+  if (cached) return res.json(JSON.parse(cached));
+  res.sendResponse = res.json;
+  res.json = (body) => {
+    redis.set(key, JSON.stringify(body), "EX", 60);
+    res.sendResponse(body);
+  };
+  next();
+}
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Cache Invalidation](03-cache-invalidation.md)

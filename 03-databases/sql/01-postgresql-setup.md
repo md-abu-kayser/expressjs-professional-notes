@@ -1,26 +1,22 @@
-# 01 Postgresql Setup
+# PostgreSQL Setup with Express
 
-## Overview
-Short explanation of what this topic covers.
+## Drivers
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- `pg` – basic driver
+- `knex` – query builder
+- `sequelize` – ORM
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+## Example with `pg`
 
-## Example
-```js
-// Add a working example here
+```javascript
+const { Pool } = require("pg");
+const pool = new Pool({
+  host: "localhost",
+  database: "mydb",
+  user: "user",
+  password: "pass",
+});
+const result = await pool.query("SELECT * FROM users");
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Sequelize / Knex Setup](02-sequelize-knex-setup.md)

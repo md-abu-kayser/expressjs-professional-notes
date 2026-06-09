@@ -1,26 +1,30 @@
-# 02 Sequelize Knex Setup
+# Sequelize and Knex Setup
 
-## Overview
-Short explanation of what this topic covers.
+## Sequelize
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install sequelize pg pg-hstore
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const { Sequelize } = require("sequelize");
+const sequelize = new Sequelize("database", "username", "password", {
+  host: "localhost",
+  dialect: "postgres",
+});
+```
 
-## Summary
-Write a short recap here.
+## Knex
+
+```bash
+npm install knex pg
+```
+
+```javascript
+const knex = require('knex')({
+  client: 'pg',
+  connection: { ... }
+});
+```
+
+> 📘 Next: [Migrations & Seeds](03-migrations-seeds.md)

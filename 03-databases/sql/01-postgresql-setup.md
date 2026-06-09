@@ -2,9 +2,9 @@
 
 ## Drivers
 
-- `pg` – basic driver
-- `knex` – query builder
-- `sequelize` – ORM
+- `pg` - basic driver
+- `knex` - query builder
+- `sequelize` - ORM
 
 ## Example with `pg`
 

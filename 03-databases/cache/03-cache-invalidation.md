@@ -1,26 +1,11 @@
-# 03 Cache Invalidation
+# Cache Invalidation
 
-## Overview
-Short explanation of what this topic covers.
+Hard problem: remove stale data.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- **Key deletion**: when data changes, delete cache key.
+- **Bulk invalidation**: pattern like `del user:*` (supported by Redis SCAN).
+- **Time-based**: set TTL; data eventually expires.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+Implement hook on data update to delete related caches.
 
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **04-authentication-authorization** – [Password Hashing](../04-authentication-authorization/01-password-hashing-bcrypt.md)

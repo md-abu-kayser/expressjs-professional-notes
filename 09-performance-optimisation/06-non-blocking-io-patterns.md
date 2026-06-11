@@ -1,26 +1,8 @@
-# 06 Non Blocking Io Patterns
+# Non‑Blocking I/O Patterns
 
-## Overview
-Short explanation of what this topic covers.
+- Use async/await with promises.
+- Avoid `sync` functions in production code.
+- Stream large data.
+- Offload heavy tasks.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **10-logging-monitoring** – [Morgan & Winston](../10-logging-monitoring/01-morgan-winston.md)

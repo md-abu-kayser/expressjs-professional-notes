@@ -1,26 +1,10 @@
-# 01 Rest Conventions
+# REST API Conventions
 
-## Overview
-Short explanation of what this topic covers.
+- Use nouns for resources: `/users`, `/products`
+- Use HTTP methods: GET, POST, PUT, DELETE
+- Use plural nouns (e.g., `/users` not `/user`)
+- Nested routes for relations: `/users/:userId/posts`
+- Consistent status codes
+- JSON response format
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [API Versioning](02-versioning.md)

@@ -1,26 +1,18 @@
-# 04 Hateoas
+# HATEOAS (Hypermedia as the Engine of Application State)
 
-## Overview
-Short explanation of what this topic covers.
+Include links in responses:
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```json
+{
+  "id": 1,
+  "name": "John",
+  "_links": {
+    "self": { "href": "/users/1" },
+    "posts": { "href": "/users/1/posts" }
+  }
+}
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Helps API discoverability.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [API Documentation with Swagger](05-api-documentation-swagger.md)

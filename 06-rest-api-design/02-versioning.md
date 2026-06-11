@@ -1,26 +1,9 @@
-# 02 Versioning
+# API Versioning Strategies
 
-## Overview
-Short explanation of what this topic covers.
+- **URI versioning**: `/api/v1/users`
+- **Header versioning**: `Accept: application/vnd.myapp.v1+json`
+- **Query parameter**: `/users?version=1`
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+URI versioning is most common and easy to implement.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Pagination, Filtering, Sorting](03-pagination-filtering-sorting.md)

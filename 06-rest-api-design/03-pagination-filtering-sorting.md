@@ -1,26 +1,20 @@
-# 03 Pagination Filtering Sorting
+# Pagination, Filtering, and Sorting
 
-## Overview
-Short explanation of what this topic covers.
+## Pagination
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const page = parseInt(req.query.page) || 1;
+const limit = parseInt(req.query.limit) || 10;
+const skip = (page - 1) * limit;
+const results = await User.find().skip(skip).limit(limit);
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+## Filtering
 
-## Summary
-Write a short recap here.
+`?role=admin&age[gte]=18`
+
+## Sorting
+
+`?sort=-createdAt` (descending) or `?sort=name` (ascending)
+
+> 📘 Next: [HATEOAS](04-hateoas.md)

@@ -1,26 +1,15 @@
-# 06 GraphQL With Express
+# GraphQL with Express
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install express-graphql graphql
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const { graphqlHTTP } = require("express-graphql");
+const schema = require("./schema");
+app.use("/graphql", graphqlHTTP({ schema, graphiql: true }));
+```
 
-## Summary
-Write a short recap here.
+Single endpoint, query language for APIs.
+
+> 📘 Next: **07-testing** – [Unit Testing with Jest](../07-testing/01-unit-testing-jest.md)

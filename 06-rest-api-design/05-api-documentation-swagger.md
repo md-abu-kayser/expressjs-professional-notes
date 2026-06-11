@@ -1,26 +1,13 @@
-# 05 API Documentation Swagger
+# API Documentation with Swagger
 
-## Overview
-Short explanation of what this topic covers.
+Use `swagger-jsdoc` and `swagger-ui-express`.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./swagger");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Generate OpenAPI specification from JSDoc comments.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [GraphQL with Express](06-graphql-with-express.md)

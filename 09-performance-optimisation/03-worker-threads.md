@@ -1,26 +1,11 @@
-# 03 Worker Threads
+# Worker Threads for CPU-Intensive Tasks
 
-## Overview
-Short explanation of what this topic covers.
+Offload heavy computation from the event loop.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const { Worker } = require("worker_threads");
+const worker = new Worker("./worker.js", { workerData: { n: 40 } });
+worker.on("message", (result) => console.log(result));
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Load Testing with Artillery](04-load-testing-artillery.md)

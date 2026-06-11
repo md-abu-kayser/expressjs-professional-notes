@@ -1,26 +1,12 @@
-# 02 Clustering PM2
+# Clustering with PM2
 
-## Overview
-Short explanation of what this topic covers.
+PM2 provides process management and clustering.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install -g pm2
+pm2 start app.js -i max
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Zero-downtime reloads, auto-restart, load balancing.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Worker Threads](03-worker-threads.md)

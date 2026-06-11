@@ -1,26 +1,10 @@
-# 04 Load Testing Artillery
+# Load Testing with Artillery
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install -g artillery
+artillery quick --count 10 -n 20 http://localhost:3000/api
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Generates reports to identify bottlenecks.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Database Query Optimisation](05-database-query-optimisation.md)

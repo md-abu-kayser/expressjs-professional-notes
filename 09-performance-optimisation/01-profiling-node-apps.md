@@ -1,26 +1,8 @@
-# 01 Profiling Node Apps
+# Profiling Node.js Apps
 
-## Overview
-Short explanation of what this topic covers.
+- `node --inspect` + Chrome DevTools
+- Clinic.js for performance analysis
+- 0x for flame graphs
+- Identify CPU bottlenecks and memory leaks.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Clustering & PM2](02-clustering-pm2.md)

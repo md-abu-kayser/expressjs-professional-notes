@@ -1,26 +1,16 @@
-# 05 Role Based Access Control
+# Role-Based Access Control (RBAC)
 
-## Overview
-Short explanation of what this topic covers.
+Define roles (`admin`, `editor`, `viewer`) and middleware:
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+function authorize(...roles) {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role))
+      return res.status(403).send("Forbidden");
+    next();
+  };
+}
+app.delete("/users/:id", authMiddleware, authorize("admin"), handler);
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [API Keys](06-api-keys.md)

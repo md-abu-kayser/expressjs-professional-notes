@@ -1,26 +1,11 @@
-# 07 Two Factor Auth
+# Two-Factor Authentication (2FA)
 
-## Overview
-Short explanation of what this topic covers.
+Implementation concepts:
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- Generate secret with `speakeasy`.
+- Generate QR code for authenticator app.
+- Verify TOTP token on login.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+Adds extra security layer.
 
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **05-advanced-express** – [Router Object](../05-advanced-express/01-router-object-modular-routing.md)

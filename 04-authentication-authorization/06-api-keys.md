@@ -1,26 +1,11 @@
-# 06 API Keys
+# API Keys
 
-## Overview
-Short explanation of what this topic covers.
+Simple authentication for machine-to-machine.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+- Store API keys in database.
+- Validate via header: `x-api-key`.
+- Middleware checks key against DB.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
+Not as secure as JWT; use HTTPS.
 
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Two-Factor Auth](07-two-factor-auth.md)

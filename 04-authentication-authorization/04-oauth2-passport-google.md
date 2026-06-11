@@ -1,26 +1,25 @@
-# 04 OAuth2 Passport Google
+# OAuth2 with Passport (Google Strategy)
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install passport passport-google-oauth20
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL: "/auth/google/callback",
+    },
+    (accessToken, refreshToken, profile, done) => {
+      // find or create user
+      done(null, user);
+    },
+  ),
+);
+```
 
-## Summary
-Write a short recap here.
+Routes: `/auth/google`, `/auth/google/callback`.
+
+> 📘 Next: [Role-Based Access Control](05-role-based-access-control.md)

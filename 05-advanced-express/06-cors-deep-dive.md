@@ -1,26 +1,24 @@
-# 06 Cors Deep Dive
+# CORS (Cross-Origin Resource Sharing)
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install cors
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const cors = require("cors");
+// Allow all
+app.use(cors());
+// Specific origin
+app.use(cors({ origin: "https://example.com" }));
+// Dynamic origin
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) callback(null, true);
+      else callback(new Error("Not allowed"));
+    },
+  }),
+);
+```
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Compression](07-compression.md)

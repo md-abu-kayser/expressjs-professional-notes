@@ -1,26 +1,16 @@
-# 01 Router Object Modular Routing
+# Router Object & Modular Routing
 
-## Overview
-Short explanation of what this topic covers.
+```javascript
+// users.routes.js
+const router = express.Router();
+router.get("/", listUsers);
+router.post("/", createUser);
+module.exports = router;
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+// app.js
+app.use("/api/users", require("./routes/users"));
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Keeps code organized and scalable.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Express Sessions & Cookies](02-express-session-cookies.md)

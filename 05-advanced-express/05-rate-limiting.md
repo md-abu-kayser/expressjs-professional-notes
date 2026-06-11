@@ -1,26 +1,18 @@
-# 05 Rate Limiting
+# Rate Limiting
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install express-rate-limit
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const rateLimit = require("express-rate-limit");
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 min
+  max: 100,
+});
+app.use("/api/", limiter);
+```
 
-## Summary
-Write a short recap here.
+Protects against brute force and DDoS.
+
+> 📘 Next: [CORS Deep Dive](06-cors-deep-dive.md)

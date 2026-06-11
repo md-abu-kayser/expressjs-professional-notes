@@ -1,26 +1,12 @@
-# 08 Streaming Responses
+# Streaming Responses
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.get("/large-file", (req, res) => {
+  const readStream = fs.createReadStream("large.dat");
+  readStream.pipe(res);
+});
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Useful for large payloads, avoids buffering entire response in memory.
 
-## Summary
-Write a short recap here.
+> 📘 Next: **06-rest-api-design** – [REST Conventions](../06-rest-api-design/01-rest-conventions.md)

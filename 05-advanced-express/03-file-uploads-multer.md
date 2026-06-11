@@ -1,26 +1,17 @@
-# 03 File Uploads Multer
+# File Uploads using Multer
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install multer
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+app.post("/upload", upload.single("avatar"), (req, res) => {
+  console.log(req.file);
+});
+```
 
-## Summary
-Write a short recap here.
+Options: limit file size, filter types, store in memory/S3.
+
+> 📘 Next: [Request Validation with Joi](04-request-validation-joi.md)

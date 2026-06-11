@@ -1,26 +1,14 @@
-# 07 Compression
+# Response Compression
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install compression
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const compression = require("compression");
+app.use(compression());
+```
 
-## Summary
-Write a short recap here.
+Compresses responses (gzip, deflate) for supported clients; reduces bandwidth.
+
+> 📘 Next: [Streaming Responses](08-streaming-responses.md)

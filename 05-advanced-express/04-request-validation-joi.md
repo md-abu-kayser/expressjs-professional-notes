@@ -1,26 +1,17 @@
-# 04 Request Validation Joi
+# Request Validation with Joi
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install joi
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const Joi = require("joi");
+const schema = Joi.object({
+  name: Joi.string().required(),
+  email: Joi.string().email().required(),
+});
+const { error } = schema.validate(req.body);
+if (error) return res.status(400).json({ error: error.details[0].message });
+```
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Rate Limiting](05-rate-limiting.md)

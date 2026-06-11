@@ -1,26 +1,14 @@
-# 01 Helmet Security Headers
+# Helmet – Security Headers
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install helmet
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const helmet = require("helmet");
+app.use(helmet());
+```
 
-## Summary
-Write a short recap here.
+Sets multiple HTTP headers to enhance security.
+
+> 📘 Next: [XSS & CSRF Protection](02-xss-csrf-protection.md)

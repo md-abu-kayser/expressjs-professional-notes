@@ -1,26 +1,15 @@
-# 02 XSS CSRF Protection
+# XSS and CSRF Protection
 
-## Overview
-Short explanation of what this topic covers.
+- XSS: escape output, set Content-Security-Policy (via helmet).
+- CSRF: use CSRF tokens with `csurf` (or double submit cookie pattern).
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install csurf
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const csrf = require("csurf");
+app.use(csrf({ cookie: true }));
+```
 
-## Summary
-Write a short recap here.
+> 📘 Next: [SQL Injection Prevention](03-sql-injection-prevention.md)

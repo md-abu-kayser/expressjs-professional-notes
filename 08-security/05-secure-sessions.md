@@ -1,26 +1,8 @@
-# 05 Secure Sessions
+# Secure Sessions
 
-## Overview
-Short explanation of what this topic covers.
+- Set cookie `secure: true` in production (HTTPS only).
+- Use `httpOnly` and `sameSite` attributes.
+- Rotate session secret.
+- Store session data in Redis, not memory.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [HTTPS & TLS Termination](06-https-tls-termination.md)

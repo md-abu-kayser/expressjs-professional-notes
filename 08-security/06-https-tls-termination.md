@@ -1,26 +1,13 @@
-# 06 Https TLS Termination
+# HTTPS & TLS Termination
 
-## Overview
-Short explanation of what this topic covers.
+- Obtain SSL certificates (Let’s Encrypt).
+- Terminate TLS at reverse proxy (Nginx) and forward HTTP to Express.
+- Or use `https` module directly:
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+https.createServer({ key, cert }, app).listen(443);
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Always enforce HTTPS in production.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Dependency Auditing](07-dependency-auditing.md)

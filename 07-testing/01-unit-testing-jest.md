@@ -1,26 +1,17 @@
-# 01 Unit Testing Jest
+# Unit Testing with Jest
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install --save-dev jest supertest
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Example:
 
-## Summary
-Write a short recap here.
+```javascript
+test("adds 1+2 to equal 3", () => {
+  expect(1 + 2).toBe(3);
+});
+```
+
+For Express, test controllers/services in isolation.
+
+> 📘 Next: [Integration Testing with Supertest](02-integration-testing-supertest.md)

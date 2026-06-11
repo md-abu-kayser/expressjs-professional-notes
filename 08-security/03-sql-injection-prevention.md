@@ -1,26 +1,9 @@
-# 03 SQL Injection Prevention
+# SQL Injection Prevention
 
-## Overview
-Short explanation of what this topic covers.
+- Use parameterized queries or ORM.
+- Never concatenate user input into SQL strings.
+- Validate and sanitize inputs.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Sequelize and Knex automatically escape parameters.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [DDoS Mitigation](04-ddos-mitigation.md)

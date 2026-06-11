@@ -1,26 +1,14 @@
-# 01 Morgan Winston
+# Morgan & Winston for Logging
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install morgan winston
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+```javascript
+const morgan = require('morgan');
+const winston = require('winston');
+const logger = winston.createLogger({ ... });
+app.use(morgan('combined', { stream: { write: message => logger.info(message) } }));
+```
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Structured Logging](02-structured-logging.md)

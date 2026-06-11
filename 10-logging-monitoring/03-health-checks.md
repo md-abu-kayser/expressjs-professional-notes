@@ -1,26 +1,11 @@
-# 03 Health Checks
+# Health Checks Endpoint
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "UP", timestamp: new Date() });
+});
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Used by load balancers and orchestrators.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [APM (Elastic, New Relic)](04-apm-elastic-newrelic.md)

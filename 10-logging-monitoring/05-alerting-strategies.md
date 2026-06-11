@@ -1,26 +1,7 @@
-# 05 Alerting Strategies
+# Alerting Strategies
 
-## Overview
-Short explanation of what this topic covers.
+- Define thresholds (error rate > 1%, response time > 500ms).
+- Use Prometheus + Alertmanager or cloud monitoring alerts.
+- Alert on‑call via Slack, PagerDuty.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **11-deployment** – [Process Managers PM2](../11-deployment/01-process-managers-pm2.md)

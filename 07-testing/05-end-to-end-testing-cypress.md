@@ -1,26 +1,9 @@
-# 05 End To End Testing Cypress
+# End-to-End Testing with Cypress
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npm install --save-dev cypress
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Write tests that interact with a real browser environment. Use together with a running Express app.
 
-## Summary
-Write a short recap here.
+> 📘 Next: **08-security** – [Helmet Security Headers](../08-security/01-helmet-security-headers.md)

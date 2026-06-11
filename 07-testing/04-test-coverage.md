@@ -1,26 +1,9 @@
-# 04 Test Coverage
+# Test Coverage
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```bash
+npx jest --coverage
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Aim for high coverage but focus on critical paths. Reports in `coverage/`.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [End-to-End Testing with Cypress](05-end-to-end-testing-cypress.md)

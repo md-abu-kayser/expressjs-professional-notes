@@ -1,26 +1,16 @@
-# 02 Integration Testing Supertest
+# Integration Testing with Supertest
 
-## Overview
-Short explanation of what this topic covers.
+```javascript
+const request = require("supertest");
+const app = require("../app");
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+describe("GET /", () => {
+  it("responds with json", async () => {
+    const res = await request(app).get("/");
+    expect(res.statusCode).toBe(200);
+    expect(res.body.message).toBe("Hello World");
+  });
+});
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Mocking & Spying](03-mocking-spying.md)

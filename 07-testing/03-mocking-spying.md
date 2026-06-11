@@ -1,26 +1,11 @@
-# 03 Mocking Spying
+# Mocking and Spying with Jest
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+jest.mock("../models/user");
+const User = require("../models/user");
+User.findById.mockResolvedValue({ name: "Test" });
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Spy on functions to verify calls.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Test Coverage](04-test-coverage.md)

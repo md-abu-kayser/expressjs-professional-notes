@@ -1,26 +1,15 @@
-# 02 Dockerising Express
+# Dockerising an Express App
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+EXPOSE 3000
+CMD ["node", "app.js"]
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Use `docker build -t myapp .` and `docker run -p 3000:3000 myapp`.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Nginx Reverse Proxy](03-nginx-reverse-proxy.md)

@@ -4,4 +4,4 @@
 - Kubernetes manifests for production.
 - CI/CD per service.
 
-> 📘 Next: **15-code-snippets** – [Auth Middleware](../15-code-snippets/auth-middleware.js)
+> 📘 Next: **15-resources-cheatsheets** – [Express Cheatsheet](../15-resources-cheatsheets/express-cheatsheet.md)

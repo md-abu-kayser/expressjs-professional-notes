@@ -1,24 +1,7 @@
-# 06 Stateless Architecture
+# Stateless Architecture
 
-## Goal
-Describe the purpose of this project.
+- Store session data in Redis/JWT.
+- No local file storage.
+- Enables horizontal scaling without sticky sessions.
 
-## Core features
-- Feature 1
-- Feature 2
-- Feature 3
-
-## Folder structure
-Explain how the project is organized.
-
-## Data flow
-Explain how requests move through the app.
-
-## Key files
-- src/
-- routes/
-- controllers/
-- models/
-
-## Notes
-Add important implementation details here.
+> 📘 Next: **13-microservices** – [Monolith to Microservices](../13-microservices/01-monolith-to-microservices.md)

@@ -1,26 +1,14 @@
-# 05 Message Queues Rabbitmq Kafka
+# Message Queues
 
-## Overview
-Short explanation of what this topic covers.
+Decouple services with RabbitMQ or Kafka. Use for async tasks (emails, reports).
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+// Producer
+channel.sendToQueue("tasks", Buffer.from(JSON.stringify(task)));
+// Consumer
+channel.consume("tasks", (msg) => {
+  /* process */
+});
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Stateless Architecture](06-stateless-architecture.md)

@@ -1,26 +1,5 @@
-# 04 CDN Caching Edge
+# CDN & Edge Caching
 
-## Overview
-Short explanation of what this topic covers.
+Use CDN for static assets. Set `Cache-Control` headers. Edge caching reduces latency.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Message Queues (RabbitMQ/Kafka)](05-message-queues-rabbitmq-kafka.md)

@@ -1,26 +1,8 @@
-# 03 Database Sharding Replication
+# Database Sharding & Replication
 
-## Overview
-Short explanation of what this topic covers.
+- **Replication**: master-slave, read replicas for scaling reads.
+- **Sharding**: split data across multiple databases based on key.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Choose based on data access patterns.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [CDN & Edge Caching](04-cdn-caching-edge.md)

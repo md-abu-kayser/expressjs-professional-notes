@@ -1,26 +1,7 @@
-# 03 API Gateway
+# API Gateway
 
-## Overview
-Short explanation of what this topic covers.
+Single entry point for clients; handles routing, authentication, rate limiting.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Examples: Express Gateway, Kong, Traefik, custom Express app as gateway.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Inter-service Communication](04-inter-service-communication.md)

@@ -1,26 +1,7 @@
-# 02 Service Discovery
+# Service Discovery
 
-## Overview
-Short explanation of what this topic covers.
+- Client-side discovery: service registry (Consul, etcd).
+- Server-side: load balancer knows the backends.
+- In Kubernetes, use Services and DNS.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [API Gateway](03-api-gateway.md)

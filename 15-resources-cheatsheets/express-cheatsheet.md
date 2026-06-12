@@ -1,26 +1,9 @@
 # Express Cheatsheet
 
-## Overview
-Short explanation of what this topic covers.
+- `app.use([path], callback)`
+- `app.get/post/put/delete(path, callback)`
+- `res.send()`, `res.json()`, `res.status()`, `res.redirect()`, `res.sendFile()`
+- `req.params`, `req.query`, `req.body`, `req.headers`
+- `next()`, `next(err)`
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [HTTP Status Codes](http-status-codes.md)

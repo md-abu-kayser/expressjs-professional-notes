@@ -1,26 +1,20 @@
-# 07 Github Actions CI/CD
+# CI/CD with GitHub Actions
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```yaml
+name: Deploy
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npm test
+      - name: Build and push Docker image
+        ...
+      - name: Deploy to server
+        ...
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **12-scaling-strategies** – [Vertical vs Horizontal Scaling](../12-scaling-strategies/01-vertical-vs-horizontal-scaling.md)

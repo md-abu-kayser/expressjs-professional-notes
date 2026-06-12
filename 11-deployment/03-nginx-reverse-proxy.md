@@ -1,26 +1,15 @@
-# 03 NGINX Reverse Proxy
+# Nginx as Reverse Proxy
 
-## Overview
-Short explanation of what this topic covers.
-
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```
+server {
+    listen 80;
+    server_name example.com;
+    location / {
+        proxy_pass http://localhost:3000;
+    }
+}
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+Handles static files, SSL termination, and load balancing.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [AWS EC2 Deployment](04-aws-ec2-deployment.md)

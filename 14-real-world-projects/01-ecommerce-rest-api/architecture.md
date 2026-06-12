@@ -1,24 +1,9 @@
-# Architecture
+# Ecommerce REST API – Architecture
 
-## Goal
-Describe the purpose of this project.
+Features: users, products, orders, cart, payments.
 
-## Core features
-- Feature 1
-- Feature 2
-- Feature 3
+Tech: Express, MongoDB, JWT, Redis cache.
 
-## Folder structure
-Explain how the project is organized.
+Folder structure, data models, and API design.
 
-## Data flow
-Explain how requests move through the app.
-
-## Key files
-- src/
-- routes/
-- controllers/
-- models/
-
-## Notes
-Add important implementation details here.
+(Details in code-walkthrough.md)

@@ -1,16 +1,13 @@
-# Code Walkthrough
+# Ecommerce REST API – Code Walkthrough
 
-## Walkthrough
-Explain the code step by step.
+Key endpoints:
 
-## Entry point
-Mention the first file to read.
+- POST /auth/register
+- POST /auth/login
+- GET /products?category=...
+- POST /cart
+- POST /orders
 
-## Important logic
-- Validation
-- Routing
-- Database access
-- Error handling
+Sample controller and model code.
 
-## Summary
-Add a short recap.
+> 📘 Next: [Testing & Deployment](testing-deployment.md)

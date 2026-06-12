@@ -1,26 +1,8 @@
-# 04 Inter Service Communication
+# Inter-service Communication
 
-## Overview
-Short explanation of what this topic covers.
+- Synchronous: HTTP/REST, gRPC.
+- Asynchronous: message brokers (RabbitMQ, Kafka).
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Use timeouts, retries, and circuit breakers.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Circuit Breakers](05-circuit-breakers.md)

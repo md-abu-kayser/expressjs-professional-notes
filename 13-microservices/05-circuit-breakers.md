@@ -1,26 +1,12 @@
-# 05 Circuit Breakers
+# Circuit Breakers
 
-## Overview
-Short explanation of what this topic covers.
+Pattern to prevent cascading failures.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Use `opossum` library:
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```javascript
+const breaker = new CircuitBreaker(serviceCall, { timeout: 3000 });
+const result = await breaker.fire();
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Event-Driven Architecture](06-event-driven-architecture.md)

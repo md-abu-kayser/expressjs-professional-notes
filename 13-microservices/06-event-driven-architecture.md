@@ -1,24 +1,7 @@
-# 06 Event Driven Architecture
+# Event-Driven Architecture
 
-## Goal
-Describe the purpose of this project.
+Services communicate via events (pub/sub). Kafka topics, RabbitMQ exchanges.
 
-## Core features
-- Feature 1
-- Feature 2
-- Feature 3
+Loose coupling, eventual consistency.
 
-## Folder structure
-Explain how the project is organized.
-
-## Data flow
-Explain how requests move through the app.
-
-## Key files
-- src/
-- routes/
-- controllers/
-- models/
-
-## Notes
-Add important implementation details here.
+> 📘 Next: **14-real-world-projects** – [Ecommerce REST API](../14-real-world-projects/01-ecommerce-rest-api/architecture.md)

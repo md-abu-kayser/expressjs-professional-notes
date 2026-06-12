@@ -1,26 +1,14 @@
-# 02 Load Balancing NGINX Haproxy
+# Load Balancing with Nginx / HAProxy
 
-## Overview
-Short explanation of what this topic covers.
+Nginx upstream block distributes requests across multiple Express instances.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
+```
+upstream app_servers {
+    server localhost:3001;
+    server localhost:3002;
+}
 ```
 
-## Common mistakes
-- Mistake 1
-- Mistake 2
+HAProxy provides similar functionality with richer algorithms.
 
-## Summary
-Write a short recap here.
+> 📘 Next: [Database Sharding & Replication](03-database-sharding-replication.md)

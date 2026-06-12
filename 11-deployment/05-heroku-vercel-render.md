@@ -1,26 +1,9 @@
-# 05 Heroku Vercel Render
+# Deploying to Heroku, Vercel, Render
 
-## Overview
-Short explanation of what this topic covers.
+- **Heroku**: `git push heroku main`
+- **Vercel**: serverless functions with Express adapter
+- **Render**: web service from repo, automatic HTTPS
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+All provide free tiers.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Kubernetes Deployment](06-kubernetes-deployment.md)

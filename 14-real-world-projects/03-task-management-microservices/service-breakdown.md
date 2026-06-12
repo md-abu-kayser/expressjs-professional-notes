@@ -1,26 +1,7 @@
-# Service Breakdown
+# Task Management Microservices – Deployment
 
-## Overview
-Short explanation of what this topic covers.
+- Docker Compose for local development.
+- Kubernetes manifests for production.
+- CI/CD per service.
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: **15-code-snippets** – [Auth Middleware](../15-code-snippets/auth-middleware.js)

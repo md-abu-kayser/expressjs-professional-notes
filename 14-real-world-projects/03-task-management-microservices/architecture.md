@@ -1,24 +1,7 @@
-# Architecture
+# Task Management Microservices – Architecture
 
-## Goal
-Describe the purpose of this project.
+Services: user-service, task-service, notification-service.
 
-## Core features
-- Feature 1
-- Feature 2
-- Feature 3
+Communication via RabbitMQ. API Gateway exposes REST.
 
-## Folder structure
-Explain how the project is organized.
-
-## Data flow
-Explain how requests move through the app.
-
-## Key files
-- src/
-- routes/
-- controllers/
-- models/
-
-## Notes
-Add important implementation details here.
+> 📘 Next: [Service Breakdown](service-breakdown.md)

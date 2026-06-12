@@ -1,24 +1,7 @@
-# Architecture
+# Realtime Chat with Socket.io – Architecture
 
-## Goal
-Describe the purpose of this project.
+Express + Socket.io + MongoDB.
 
-## Core features
-- Feature 1
-- Feature 2
-- Feature 3
+Features: rooms, private messages, online status.
 
-## Folder structure
-Explain how the project is organized.
-
-## Data flow
-Explain how requests move through the app.
-
-## Key files
-- src/
-- routes/
-- controllers/
-- models/
-
-## Notes
-Add important implementation details here.
+> 📘 Next: [Code Walkthrough](code-walkthrough.md)

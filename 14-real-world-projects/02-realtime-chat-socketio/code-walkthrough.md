@@ -1,16 +1,13 @@
-# Code Walkthrough
+# Realtime Chat – Code Walkthrough
 
-## Walkthrough
-Explain the code step by step.
+Socket.io setup:
 
-## Entry point
-Mention the first file to read.
+```javascript
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+io.on('connection', socket => { ... });
+```
 
-## Important logic
-- Validation
-- Routing
-- Database access
-- Error handling
+Handling events, rooms, and authentication.
 
-## Summary
-Add a short recap.
+> 📘 Next: [Scaling Notes](scaling-notes.md)

@@ -1,26 +1,8 @@
-# 01 Vertical Vs Horizontal Scaling
+# Vertical vs Horizontal Scaling
 
-## Overview
-Short explanation of what this topic covers.
+- **Vertical**: increase resources (CPU/RAM) of a single server.
+- **Horizontal**: add more servers (load balancing).
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
+Express apps scale horizontally well if stateless.
 
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Load Balancing with Nginx / HAProxy](02-load-balancing-nginx-haproxy.md)

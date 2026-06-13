@@ -1,6 +1,6 @@
-/**
- * Rate Limiter Config
- * Reusable code snippet for the Express.js notes project.
- */
+// Rate Limiter Config
 
-// Add your implementation here
+```javascript
+const rateLimit = require('express-rate-limit');
+exports.apiLimiter = rateLimit({ windowMs: 15*60*1000, max: 100 });
+```;

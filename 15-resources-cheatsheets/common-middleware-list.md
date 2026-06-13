@@ -1,26 +1,7 @@
-# Common Middleware List
+# Common Middleware Packages
 
-## Overview
-Short explanation of what this topic covers.
+- `morgan`, `cors`, `helmet`, `compression`, `cookie-parser`
+- `express-rate-limit`, `express-session`
+- `multer`, `passport`, `swagger-ui-express`
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Books, Courses, Links](books-courses-links.md)

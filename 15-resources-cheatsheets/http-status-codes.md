@@ -1,26 +1,8 @@
-# HTTP Status Codes
+# Common HTTP Status Codes
 
-## Overview
-Short explanation of what this topic covers.
+- 200 OK, 201 Created, 204 No Content
+- 301 Moved Permanently, 304 Not Modified
+- 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests
+- 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable
 
-## Why it matters
-- Helps you understand Express.js better
-- Shows practical usage
-- Connects theory with real projects
-
-## Core ideas
-- Key concept 1
-- Key concept 2
-- Key concept 3
-
-## Example
-```js
-// Add a working example here
-```
-
-## Common mistakes
-- Mistake 1
-- Mistake 2
-
-## Summary
-Write a short recap here.
+> 📘 Next: [Common Middleware List](common-middleware-list.md)

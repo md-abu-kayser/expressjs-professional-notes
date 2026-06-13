@@ -1,7 +1,5 @@
-# Task Management Microservices – Deployment
+# Task Management Microservices – Service Breakdown
 
-- Docker Compose for local development.
-- Kubernetes manifests for production.
-- CI/CD per service.
+Each service described with endpoints, DB schema, and message contracts.
 
-> 📘 Next: **15-resources-cheatsheets** – [Express Cheatsheet](../15-resources-cheatsheets/express-cheatsheet.md)
+> 📘 Next: [Deployment Guide](deployment-guide.md)

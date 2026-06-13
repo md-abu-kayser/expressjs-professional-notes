@@ -1,5 +1,7 @@
-# Task Management Microservices – Service Breakdown
+# Task Management Microservices – Deployment
 
-Each service described with endpoints, DB schema, and message contracts.
+- Docker Compose for local development.
+- Kubernetes manifests for production.
+- CI/CD per service.
 
-> 📘 Next: [Deployment Guide](deployment-guide.md)
+> 📘 Next: **15-code-snippets** – [Auth Middleware](../15-code-snippets/auth-middleware.js)
